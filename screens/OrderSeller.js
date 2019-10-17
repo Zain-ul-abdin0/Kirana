@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, FlatList, StyleSheet, Image } from "react-native";
+import { Text, View, FlatList, StyleSheet, Image,TouchableOpacity } from "react-native";
 import BackBtn from "../components/BackBtn";
 import { Ionicons } from "@expo/vector-icons";
 import ToggleSwitch from "toggle-switch-react-native";
@@ -174,10 +174,15 @@ export class OrderSeller extends Component {
                 source={require("../pics/3xcategory.png")}
                 style={{ height: 50, width: 50 }}
               />
-              <Image
+            
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Cart')}}>
+            <Image
+            
                 source={require("../pics/3xprofile.png")}
                 style={{ height: 50, width: 50 }}
               />
+              </TouchableOpacity>
+             
               <Image
                 source={require("../pics/3xsupport.png")}
                 style={{ height: 50, width: 50 }}
